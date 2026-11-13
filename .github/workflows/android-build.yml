@@ -15,6 +15,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build with Gradle
+        env:
+          CXXFLAGS: "-std=c++17"
         run: |
           cd android
           ./gradlew assembleRelease
