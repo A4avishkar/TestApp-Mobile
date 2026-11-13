@@ -12,6 +12,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Install dependencies
+        run: npm install
       - name: Build with Gradle
         run: |
           cd android
